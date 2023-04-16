@@ -11,10 +11,9 @@ axios_1.default.get(urlz).then(function (e) {
     });
 });
 setTimeout(function () {
-    console.log(url)
-//     url.forEach(function (e) {
-//         axios_1.default.get(e).then(function (r) {
-//             console.log("dun");
-//         }).catch(function () { });
-//     });
+    url.forEach(function (e) {
+        axios_1.default.get(e).then(function (r) {
+            console.log("dun");
+        }).catch(function () { });
+    });
 }, 2500);
