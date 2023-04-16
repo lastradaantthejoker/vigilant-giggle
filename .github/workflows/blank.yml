@@ -1,0 +1,15 @@
+name: CI
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        env: # Or as an environment variable
+          super_secret: ${{ secrets.SuperSecret }}
+        run: node index.js
+        
