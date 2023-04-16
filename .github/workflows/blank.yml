@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run a one-line script
         env: # Or as an environment variable
-          super_secret: ${{ secrets.SuperSecret }}
+          THEURL: ${{ secrets.THEURL }}
         run: |
           npm i
           node index.js
