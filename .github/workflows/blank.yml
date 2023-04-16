@@ -11,5 +11,7 @@ jobs:
       - name: Run a one-line script
         env: # Or as an environment variable
           super_secret: ${{ secrets.SuperSecret }}
-        run: node index.js
+        run: |
+          npm i
+          node index.js
         
