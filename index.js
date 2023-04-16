@@ -14,6 +14,8 @@ setTimeout(function () {
     url.forEach(function (e) {
         axios_1.default.get(e).then(function (r) {
             console.log("dun");
-        }).catch(function () { });
+        }).catch(function (err) { 
+            console.log(err)
+        });
     });
 }, 2500);
